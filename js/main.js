@@ -57,6 +57,18 @@
         return false;
     });
 
+    // whatsapp
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.whatsapp').fadeIn('slow');
+        } else {
+            $('.whatsapp').fadeOut('slow');
+        }
+    });
+    $('.whatsapp').click(function () {
+        $('html, body').animate({scrollDown: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
